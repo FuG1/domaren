@@ -1,0 +1,23 @@
+/* search-results.css */
+.search-results {
+    display: flex;
+    gap: 2em;
+}
+
+.filters {
+    width: 20%;
+    border-right: 1px solid #ccc;
+}
+
+.properties {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.property-card {
+    border: 1px solid #ccc;
+    padding: 1em;
+    width: 300px;
+}

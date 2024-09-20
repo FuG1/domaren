@@ -1,0 +1,196 @@
+/* global.css */
+
+/* Сброс отступов и базовая настройка */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Базовые стили для body */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8;  /* Светло-серый фон */
+    color: #333; /* Темный текст */
+}
+
+/* Оформление ссылок */
+a {
+    color: #007BFF; /* Ярко-синий цвет ссылок */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Темнее при наведении */
+}
+
+/* Основные стили для header */
+header {
+    background-color: #2C3E50; /* Темно-синий фон, символ надежности */
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ECF0F1; /* Светло-серый оттенок для логотипа */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+nav a {
+    color: #ECF0F1; /* Белый текст */
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495E; /* Немного темнее при наведении */
+}
+
+/* Стили для футера */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+/* Стили для основного контента */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Глубокая тень для объема */
+}
+
+/* Стили для заголовков */
+h1, h2 {
+    color: #2C3E50;
+    margin-bottom: 1em;
+}
+
+/* Кнопки */
+button {
+    background-color: #28A745; /* Зеленый - цвет уверенности и действия */
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838; /* Темнее при наведении */
+}
+
+/* Поля ввода */
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #ECF0F1; /* Светло-серый фон */
+    font-size: 1em;
+    color: #2C3E50;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: #007BFF; /* Синяя рамка при фокусе */
+}
+
+/* Стили для карточек объектов */
+.property-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+    max-width: 300px;
+}
+
+.property-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.property-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Легкое увеличение тени при наведении */
+}
+
+.property-card p {
+    color: #2C3E50;
+}
+
+/* Стили для форм */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form label {
+    font-size: 1.1em;
+    color: #2C3E50;
+}
+
+/* Стили для таблиц */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5em;
+}
+
+table th, table td {
+    padding: 0.75em;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+table th {
+    background-color: #007BFF; /* Синяя шапка таблицы */
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f3f5; /* Легкое выделение строки при наведении */
+}
+
+/* Отступы и выравнивания */
+.mt-1 {
+    margin-top: 1em;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+.text-center {
+    text-align: center;
+}

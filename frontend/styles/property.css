@@ -1,0 +1,19 @@
+/* property-details.css */
+.property-details {
+    display: flex;
+    gap: 2em;
+}
+
+#kvartira {
+    width: 400px;  /* Ширина изображения 400 пикселей */
+    height: auto;  /* Высота автоматически подстраивается, сохраняя пропорции */
+  }
+
+.property-gallery img {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.property-info {
+    max-width: 400px;
+}

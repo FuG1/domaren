@@ -1,0 +1,16 @@
+/* dashboard.css */
+.user-dashboard {
+    padding: 2em;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.saved-properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domaren - Поиск недвижимости</title>
+    <link rel="stylesheet" href="/frontend/styles/global.css">
+    <link rel="stylesheet" href="/frontend/styles/home.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">Domaren</div>
+        <nav>
+            <ul>
+                
+                <li><a href="#">Снять</a></li>
+                
+                <li><a href="#">Зарегистрироваться</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search">
+            <h1>Найдите недвижимость мечты на Domaren</h1>
+            <form action="search-results.html">
+                <input type="text" placeholder="Город, улица или район" required>
+                <select>
+                    <option value="">Тип недвижимости</option>
+                   
+                    <option value="rent">Снять</option>
+                    <option value="new">Новостройки</option>
+                </select>
+                <button type="submit">Найти</button>
+            </form>
+        </section>
+
+        <section class="featured-properties">
+            <h2>Рекомендуем</h2>
+            <div class="property-card">
+                <img src="/frontend/images/center.jpg" alt="Квартира в центре">
+                <p>Квартира в центре города</p>
+                <p>Цена: 80000₽ в мес.</p>
+            </div>
+            <div class="property-card">
+                <img src="/frontend/images/prigorod.jpg" alt="Квартира в пригороде">
+                <p>Квартира в пригороде</p>
+                <p>Цена: 40000₽ в мес.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Domaren. Все права защищены.</p>
+    </footer>
+    <script src="/frontend/scripts/global.js"></script>
+</body>
+</html>
