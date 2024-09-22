@@ -1,12 +1,7 @@
 ﻿using domaren.realstate.BLL.Contracts;
-using domaren.realstate.BLL.DAL.Contarcts;
-using domaren.realstate.BLL.DAL.Models;
 using domaren.realstate.BLL.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using domaren.realstate.BLL.Repositories.Contarcts;
+using domaren.realstate.BLL.Repositories.Models;
 
 namespace domaren.realstate.BLL.Services
 {
@@ -19,7 +14,7 @@ namespace domaren.realstate.BLL.Services
             _userRepository = userRepository;
         }
 
-        public User GetUser(int id)
+        public User? GetUser(int id)
         {
             var userRecord = _userRepository.GetUser(id);
             var user = ToUser(userRecord);
