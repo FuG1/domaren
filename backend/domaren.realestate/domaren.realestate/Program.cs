@@ -1,7 +1,5 @@
-using domaren.realstate.BLL.Contracts;
-using domaren.realstate.BLL.DAL.Contarcts;
-using domaren.realstate.BLL.Services;
-using domaren.realstate.DAL.Repositories;
+using domaren.realstate.BLL.DI;
+using domaren.realstate.DAL.DI;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,8 +9,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddSingleton<IUserRepository, UserRepository>();
+
+builder.Services
+    .AddBllModules()
+    .AddDalModules();
 
 var app = builder.Build();
 
