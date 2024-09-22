@@ -1,5 +1,3 @@
-// dashboard.js
-
 // Пример удаления объекта из избранного
 const savedProperties = document.querySelectorAll('.property-card');
 

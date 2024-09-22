@@ -1,5 +1,3 @@
-// search.js
-
 // Пример использования фильтров поиска
 const form = document.querySelector('.filters form');
 
