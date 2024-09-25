@@ -1,34 +1,28 @@
-﻿using domaren.realstate.BLL.DAL.Contarcts;
-using domaren.realstate.BLL.DAL.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using domaren.realstate.BLL.Repositories.Contarcts;
+using domaren.realstate.BLL.Repositories.Models;
+using domaren.realstate.DAL.EF;
 
 namespace domaren.realstate.DAL.Repositories
 {
     public class UserRepository : IUserRepository
-    {  
-        private readonly List<UserRecord> _records;
-        private int _id;
-        public UserRepository() 
-        { 
-            _records = new List<UserRecord>();
-            _id = 0;
-        }
-        public UserRecord GetUser(int id)
-        {
-            return _records.FirstOrDefault(x => x.Id == id);
+    {
+        private readonly RealEstateDBContext _dbContext;
 
+        public UserRepository(RealEstateDBContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+        public UserRecord? GetUser(int id)
+        {
+            return _dbContext.Users
+                .FirstOrDefault(x => x.Id == id);
         }
 
         public int SaveUser(UserRecord user)
         {
-            _id++;
-            user.Id = _id;
-            _records.Add(user);
-            return _id;
+            _dbContext.Users.Add(user);
+            return _dbContext.SaveChanges();
         }
     }
 }
