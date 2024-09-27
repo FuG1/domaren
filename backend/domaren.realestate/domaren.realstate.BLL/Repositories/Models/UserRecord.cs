@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace domaren.realstate.BLL.DAL.Models
+﻿namespace domaren.realstate.BLL.Repositories.Models
 {
     public class UserRecord
     {
