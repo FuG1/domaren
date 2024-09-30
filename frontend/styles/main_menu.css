@@ -154,7 +154,6 @@ h1 {
     color: #2c3e50; /* Темный синий */
 }
 
-/* Анимация формы входа */
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -174,7 +173,6 @@ form {
     }
 }
 
-/* Кнопка */
 button {
     padding: 15px;
     font-size: 18px;
@@ -190,10 +188,9 @@ button {
 
 button:hover {
     background-color: #3498db;
-    transform: scale(1.05); /* Легкий эффект увеличения */
+    transform: scale(1.05);
 }
 
-/* Анимация волны при нажатии */
 button::before {
     content: "";
     position: absolute;

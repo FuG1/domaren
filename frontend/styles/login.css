@@ -10,11 +10,8 @@ body {
     height: 100vh;
 }
 
-.domaren-header h1 {
-    font-size: 4em;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+.domaren-header img {
+    max-width: 150px;
 }
 
 .login-container {
