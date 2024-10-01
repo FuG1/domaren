@@ -20,7 +20,7 @@ namespace domaren.realstate.Infrastructure.Migrations
                     FirstName = table.Column<string>(type: "text", nullable: true),
                     LastName = table.Column<string>(type: "text", nullable: true),
                     Login = table.Column<string>(type: "text", nullable: true),
-                    Password = table.Column<string>(type: "text", nullable: true),
+                    PasswordHash = table.Column<string>(type: "text", nullable: true),
                     EMail = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
