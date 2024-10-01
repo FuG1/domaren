@@ -1,0 +1,213 @@
+main {
+    padding: 30px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 50px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.search {
+    padding: 20px;
+}
+
+.search h1 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+input[type="text"] {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+}
+
+select {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #3498db;
+}
+
+.filter {
+    grid-column: span 2;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.filter h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+#priceValue {
+    font-weight: bold;
+    margin-left: 15px;
+    color: #2980b9;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Сброс стандартных стилей браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f8fb; /* Светлый голубой фон */
+    color: #2c3e50; /* Темный синий цвет для текста */
+    line-height: 1.6;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header {
+    background-color: #34495e; /* Темно-синий */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Светлый текст */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #2980b9; /* Яркий синий для кнопок */
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #3498db; /* Более светлый синий для эффекта наведения */
+    transform: scale(1.05); /* Легкий эффект увеличения */
+}
+
+nav ul li a:active {
+    transform: scale(0.95); /* Небольшое уменьшение при нажатии */
+    background-color: #1f618d;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin: 40px 0;
+    color: #2c3e50; /* Темный синий */
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+button:active::before {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    transition: 0s;
+}

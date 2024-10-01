@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Domaren</title>
+    <link rel="stylesheet" href="/frontend/styles/main_menu.css">
+
+    <header>
+        <div class="logo">
+            <a href="/frontend/html/main_menu.html">
+                <img src="/frontend/images/logo.jpg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/frontend/html/login.html">Войти</a></li>
+                <li><a href="/frontend/html/registration.html">Зарегистрироваться</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section class="search">
+            <h1>Поиск недвижимости</h1>
+            <form action="ссылка на рез. поиска">
+                <input type="text" placeholder="Район, Улица" required>
+                <select>
+                    <option value="type">Все типы недвижимости</option>
+                    <option value="kvar">Квартира</option>
+                    <option value="loft">Лофт</option>
+                    <option value="apart">Апартаменты</option>
+                    <option value="House">Дом</option>
+                </select>
+
+                <select>
+                    <option value="class">Все классы</option>
+                    <option value="stand">Стандарт</option>
+                    <option value="comf">Комфорт</option>
+                    <option value="bisnes">Бизнес</option>
+                    <option value="prem">Премиум</option>
+                    <option value="elite">Элитный</option>
+                </select>
+
+                <div class="filter">
+                    <h2>Фильтр недвижимости по цене</h2>
+                    <label for="priceRange">Цена (в тыс. руб):</label>
+                    <input type="range" id="priceRange" min="0" max="100000" value="0" step="1000" oninput="updatePriceValue(this.value)">
+                    <span id="priceValue">0 руб</span>
+                </div>
+
+                <button type="submit">Найти</button>
+            </form>
+        </section>  
+    </main>
+    
+    <script src="/frontend/scripts/global.js"></script> 
+</body>
+</html>
