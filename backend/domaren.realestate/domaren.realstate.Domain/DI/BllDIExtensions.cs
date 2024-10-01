@@ -1,9 +1,8 @@
-﻿using domaren.realstate.BLL.Contracts;
-using domaren.realstate.BLL.Services;
+﻿using domaren.realstate.Domain.Contracts;
+using domaren.realstate.Domain.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-
-namespace domaren.realstate.BLL.DI
+namespace domaren.realstate.Domain.DI
 {
     public static class BllDIExtensions
     {

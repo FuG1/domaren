@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\domaren.realstate.BLL\domaren.realstate.BLL.csproj" />
+    <ProjectReference Include="..\domaren.realstate.Domain\domaren.realstate.Domain.csproj" />
   </ItemGroup>
 
 </Project>

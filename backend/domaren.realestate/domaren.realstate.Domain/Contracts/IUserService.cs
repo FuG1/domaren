@@ -1,6 +1,6 @@
-﻿using domaren.realstate.BLL.Models;
+﻿using domaren.realstate.Domain.Models;
 
-namespace domaren.realstate.BLL.Contracts
+namespace domaren.realstate.Domain.Contracts
 {
     public interface IUserService
     {

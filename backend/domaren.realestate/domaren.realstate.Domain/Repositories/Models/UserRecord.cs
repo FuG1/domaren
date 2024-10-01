@@ -1,6 +1,6 @@
-﻿namespace domaren.realstate.BLL.Models
+﻿namespace domaren.realstate.Domain.Repositories.Models
 {
-    public class User
+    public class UserRecord
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -8,6 +8,5 @@
         public string Login { get; set; }
         public string Password { get; set; }
         public string EMail { get; set; }
-
     }
 }

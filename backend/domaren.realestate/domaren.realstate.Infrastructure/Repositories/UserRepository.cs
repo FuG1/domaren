@@ -1,8 +1,8 @@
-﻿using domaren.realstate.BLL.Repositories.Contarcts;
-using domaren.realstate.BLL.Repositories.Models;
-using domaren.realstate.DAL.EF;
+﻿using domaren.realstate.Domain.Repositories.Contarcts;
+using domaren.realstate.Domain.Repositories.Models;
+using domaren.realstate.Infrastructure.EF;
 
-namespace domaren.realstate.DAL.Repositories
+namespace domaren.realstate.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
