@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace domaren.realestate.API.Controllers
 {
     [ApiController]
-    [Route("api/user")]
+    [Route("api/[Controller]")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -20,6 +20,7 @@ namespace domaren.realestate.API.Controllers
         {
             return _userService.GetUser(id);
         }
+
         [HttpPost]
         public int SaveUser(User user)
         {

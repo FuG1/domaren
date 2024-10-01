@@ -8,7 +8,8 @@ namespace domaren.realstate.Domain.DI
     {
         public static IServiceCollection AddBllModules(this IServiceCollection services)
         {
-            services.AddScoped<IUserService, UserService>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddScoped<IPasswordHashProvider, PasswordHashProvider>();
 
             return services;
         }
