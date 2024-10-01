@@ -1,9 +1,9 @@
-﻿using domaren.realstate.BLL.Contracts;
-using domaren.realstate.BLL.Models;
-using domaren.realstate.BLL.Repositories.Contarcts;
-using domaren.realstate.BLL.Repositories.Models;
+﻿using domaren.realstate.Domain.Contracts;
+using domaren.realstate.Domain.Models;
+using domaren.realstate.Domain.Repositories.Contarcts;
+using domaren.realstate.Domain.Repositories.Models;
 
-namespace domaren.realstate.BLL.Services
+namespace domaren.realstate.Domain.Services
 {
     public class UserService : IUserService
     {

@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\domaren.realstate.BLL\domaren.realstate.BLL.csproj" />
-    <ProjectReference Include="..\domaren.realstate.DAL\domaren.realstate.DAL.csproj" />
+    <ProjectReference Include="..\domaren.realstate.Domain\domaren.realstate.Domain.csproj" />
+    <ProjectReference Include="..\domaren.realstate.Infrastructure\domaren.realstate.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

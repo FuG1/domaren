@@ -1,6 +1,6 @@
-﻿using domaren.realstate.BLL.Repositories.Models;
+﻿using domaren.realstate.Domain.Repositories.Models;
 
-namespace domaren.realstate.BLL.Repositories.Contarcts
+namespace domaren.realstate.Domain.Repositories.Contarcts
 {
     public interface IUserRepository
     {

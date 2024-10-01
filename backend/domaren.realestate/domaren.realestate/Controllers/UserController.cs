@@ -1,8 +1,8 @@
-﻿using domaren.realstate.BLL.Contracts;
-using domaren.realstate.BLL.Models;
+﻿using domaren.realstate.Domain.Contracts;
+using domaren.realstate.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace domaren.realestate.Controllers
+namespace domaren.realestate.API.Controllers
 {
     [ApiController]
     [Route("api/user")]

@@ -3,7 +3,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace domaren.realstate.DAL.Migrations
+namespace domaren.realstate.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
