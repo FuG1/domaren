@@ -6,5 +6,7 @@ namespace domaren.realstate.Domain.Repositories.Contarcts
     {
         public UserRecord? GetUser(int id);
         public int SaveUser(UserRecord user);
+        public bool IsUserExists(string userLogin);
+        public UserRecord? GetUserByLogin(string userLogin);
     }
 }
