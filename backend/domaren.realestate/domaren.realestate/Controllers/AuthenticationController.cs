@@ -5,16 +5,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace domaren.realestate.API.Controllers;
 
-[ApiController]
-[Route("api/[Controller]")]
-public class AuthenticationController : ControllerBase
-{
+    [ApiController]
+    [Route("api/[Controller]")]
+    public class AuthenticationController : ControllerBase
+    {
     private readonly IAuthService _authService;
 
     public AuthenticationController(IAuthService authService)
-    {
+        {
         _authService = authService;
-    }
+        }
 
     [HttpPost("auth")]
     public IActionResult AuthUser([FromBody]AuthRequest request)
