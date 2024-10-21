@@ -8,7 +8,7 @@ public class JwtTokenProvider
 {
     public static string GetToken(ClaimsIdentity identity)
     {
-        var now = DateTime.UtcNow;
+        var now = DateTime.Now;
         var jwt = new JwtSecurityToken(
             issuer: RealestateAuthOptions.ISSUER,
             audience: RealestateAuthOptions.AUDIENCE,

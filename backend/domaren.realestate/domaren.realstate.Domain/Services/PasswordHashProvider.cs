@@ -11,7 +11,6 @@ namespace domaren.realstate.Domain.Services
 
         public string EncryptPassword(string password)
         {
- 
             var passwordBytes = Encoding.UTF8.GetBytes(password);
             var salt = GenerateSalt();
 
