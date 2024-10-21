@@ -1,5 +1,6 @@
 ﻿using domaren.realstate.Domain.Contracts;
 using domaren.realstate.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace domaren.realestate.API.Controllers;

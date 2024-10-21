@@ -12,9 +12,9 @@ namespace domaren.realestate.API.Controllers;
     private readonly IAuthService _authService;
 
     public AuthenticationController(IAuthService authService)
-        {
+    {
         _authService = authService;
-        }
+    }
 
     [HttpPost("auth")]
     public IActionResult AuthUser([FromBody]AuthRequest request)

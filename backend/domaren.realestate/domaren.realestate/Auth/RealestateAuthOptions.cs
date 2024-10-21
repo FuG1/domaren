@@ -7,7 +7,7 @@ public static class RealestateAuthOptions
     public const string ISSUER = "RealestateAuthServer"; 
     public const string AUDIENCE = "RealestateAuthClient"; 
     const string KEY = "RealEstateSecretKey!159Domaren=!";  
-    public const int LIFETIME_IN_MINUTES = 1;
+    public const int LIFETIME_IN_MINUTES = 30;
 
     public static SymmetricSecurityKey GetSymmetricSecurityKey()
     {
