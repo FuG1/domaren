@@ -1,0 +1,399 @@
+/* custom.css */
+
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {    
+    background-color: #0056b3;
+    color: #fff;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+/* Стили боковых панелей */
+.sidebar {
+    width: 20%;
+    padding: 10px;
+}
+
+.left-sidebar, .right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ad-space img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.ad-space img:hover {
+    transform: scale(1.05);
+}
+
+/* Центральный контент */
+.content {
+    width: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Стили компании */
+.company-info h1 {
+    margin-top: 0;
+    color: #0056b3;
+    font-size: 2em;
+}
+
+.company-details p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.company-description p {
+    margin-top: 15px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Стили вкладок с плательщиками */
+.payer-info {
+    margin-top: 30px;
+}
+
+.payer-info h2 {
+    margin-bottom: 20px;
+    color: #0056b3;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.payer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.payer-button {
+    background-color: #e0e7ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.payer-button:hover {
+    background-color: #c7d2fe;
+    transform: translateY(-2px);
+}
+
+.payer-button.active {
+    background-color: #6366f1;
+    color: #fff;
+    font-weight: bold;
+}
+
+.payer-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.payer-detail {
+    display: none;
+}
+
+.payer-detail.active {
+    display: block;
+}
+
+.payer-detail h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.payer-detail p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Секция календаря */
+.payment-calendar {
+    margin-top: 30px;
+}
+
+.payment-calendar h2 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.calendar-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#calendar {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Стили календаря */
+#monthAndYear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#monthAndYear button {
+    background-color: #0056b3;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#monthAndYear button:hover {
+    background-color: #0041a8;
+}
+
+#monthAndYear span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 15px;
+}
+
+#calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar thead th {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#calendar tbody td {
+    border: 1px solid #ddd;
+    width: 14.28%;
+    height: 100px;
+    text-align: left;
+    vertical-align: top;
+    position: relative;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #fefefe;
+    transition: background-color 0.3s;
+}
+
+#calendar tbody td:hover {
+    background-color: #f1f1f1;
+}
+
+#calendar tbody td .cell-content {
+    font-size: 1.2em;
+    position: relative;
+    word-wrap: break-word;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#calendar tbody td.today {
+    background-color: #d1e7dd;
+    border: 2px solid #0f5132;
+    border-radius: 4px;
+}
+
+#calendar tbody td.payment-day {
+    background-color: #f8d7da;
+    color: #842029;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#calendar tbody td.payment-day .payment-label {
+    font-size: 0.8em;
+    background-color: rgba(132, 32, 41, 0.8);
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    max-width: 80px;
+    word-wrap: break-word;
+}
+
+/* Футер */
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    #calendar tbody td {
+        height: 80px;
+    }
+
+    #calendar tbody td .cell-content {
+        font-size: 1em;
+    }
+
+    #calendar tbody td.payment-day .payment-label {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    #monthAndYear span {
+        font-size: 1.2em;
+    }
+
+    #calendar tbody td {
+        height: 60px;
+    }
+
+    #calendar tbody td .cell-content {
+        font-size: 0.9em;
+    }
+
+    #calendar tbody td.payment-day .payment-label {
+        font-size: 0.6em;
+    }
+
+    .payer-info h2 {
+        font-size: 1.5em;
+    }
+
+    .company-info h1 {
+        font-size: 1.5em;
+    }
+
+    .company-details p, .payer-details p {
+        font-size: 1em;
+    }
+
+    .payer-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .payer-button {
+        width: 100%;
+        max-width: 200px;
+    }
+}

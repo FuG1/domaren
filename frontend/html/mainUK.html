@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управляющая компания и календарь платежей - Domaren</title>
+    <!-- Подключение обновленного CSS -->
+    <link rel="stylesheet" href="/frontend/styles/mainUK.css">
+    <link rel="stylesheet" href="/frontend/styles/totalUK.css">
+    <link rel="stylesheet" href="/frontend/styles/calendar.css">
+    <link rel="stylesheet" href="/frontend/styles/custom.css"> <!-- Новый файл стилей -->
+</head>
+<body>
+    <header>    
+        <div class="logo"> 
+            <img src="/frontend/images/logo.jpg" alt="logo"> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">ЛК</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <!-- Левая боковая панель для фотографий или рекламы -->
+            <aside class="sidebar left-sidebar">
+                <div class="ad-space">
+                    <img src="/frontend/images/ad1.jpg" alt="Реклама 1">
+                </div>
+                <div class="ad-space">
+                    <img src="/frontend/images/ad2.jpg" alt="Реклама 2">
+                </div>
+            </aside>
+
+            <!-- Центральный контент -->
+            <section class="content">
+                <section class="company-info">
+                    <h1>Управляющая компания</h1>
+                    <div class="company-details">
+                        <p><strong>Название компании:</strong> ООО «Управляющая Компания Domaren»</p>
+                        <p><strong>Адрес:</strong> ул. Примерная, д. 10, Москва</p>
+                        <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                        <p><strong>Email:</strong> info@domaren.ru</p>
+                        <p><strong>Время работы:</strong> Пн-Пт с 09:00 до 18:00</p>
+                    </div>
+                    <div class="company-description">
+                        <p>Мы обеспечиваем качественное управление жилыми объектами, предоставляем сервисы по техническому обслуживанию и быстро реагируем на запросы жильцов.</p>
+                    </div>
+                </section>
+
+                <!-- Вкладки с информацией о плательщиках -->
+                <section class="payer-info">
+                    <h2>Информация о плательщиках</h2>
+                    <div class="payer-buttons">
+                        <button class="payer-button active" data-payer="payer1">Плательщик 1</button>
+                        <button class="payer-button" data-payer="payer2">Плательщик 2</button>
+                        <!-- Добавьте больше кнопок при необходимости -->
+                    </div>
+                    <div class="payer-details">
+                        <div id="payer1" class="payer-detail active">
+                            <h3>Плательщик 1</h3>
+                            <p><strong>Ф.И.О.:</strong> Иванов Иван Иванович</p>
+                            <p><strong>Квартира №:</strong> 45</p>
+                            <p><strong>Сумма к оплате:</strong> 15,000 руб.</p>
+                        </div>
+                        <div id="payer2" class="payer-detail">
+                            <h3>Плательщик 2</h3>
+                            <p><strong>Ф.И.О.:</strong> Петрова Мария Сергеевна</p>
+                            <p><strong>Квартира №:</strong> 32</p>
+                            <p><strong>Сумма к оплате:</strong> 12,500 руб.</p>
+                        </div>
+                        <!-- Добавьте больше секций при необходимости -->
+                    </div>
+                </section>
+
+                <!-- Секция календаря платежей -->
+                <section class="payment-calendar">
+                    <h2>Календарь платежей</h2>
+                    <div class="calendar-container">
+                        <div id="calendar"></div>
+                    </div>
+                    <p>Следите за своими платежами за аренду и коммунальные услуги с помощью нашего удобного календаря.</p>
+                </section>
+            </section>
+
+            <!-- Правая боковая панель для фотографий или рекламы -->
+            <aside class="sidebar right-sidebar">
+                <div class="ad-space">
+                    <img src="/frontend/images/ad3.jpg" alt="Реклама 3">
+                </div>
+                <div class="ad-space">
+                    <img src="/frontend/images/ad4.jpg" alt="Реклама 4">
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Футер с информацией о компании -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ООО «Управляющая Компания Domaren». Все права защищены.</p>
+            <p>Адрес: ул. Примерная, д. 10, Москва</p>
+            <p>Телефон: +7 (495) 123-45-67</p>
+            <p>Email: info@domaren.ru</p>
+        </div>
+    </footer>
+
+    <!-- Скрипт для календаря -->
+    <script>
+        const paymentDates = [5, 20]; // Дни, когда нужно внести платеж
+
+        let today = new Date();
+        let currentMonth = today.getMonth();
+        let currentYear = today.getFullYear();
+
+        const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+        let monthAndYear = document.createElement('div');
+        monthAndYear.id = 'monthAndYear';
+
+        let prevButton = document.createElement('button');
+        prevButton.innerHTML = '&#8249;';
+        prevButton.addEventListener('click', previous);
+
+        let nextButton = document.createElement('button');
+        nextButton.innerHTML = '&#8250;';
+        nextButton.addEventListener('click', next);
+
+        let monthYearText = document.createElement('span');
+
+        monthAndYear.appendChild(prevButton);
+        monthAndYear.appendChild(monthYearText);
+        monthAndYear.appendChild(nextButton);
+
+        let calendar = document.getElementById('calendar');
+        calendar.appendChild(monthAndYear);
+
+        let tbl = document.createElement('table');
+        tbl.id = 'calendar-body';
+
+        let thead = document.createElement('thead');
+        let theadRow = document.createElement('tr');
+        let days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+        for (let day of days) {
+            let th = document.createElement('th');
+            th.innerHTML = day;
+            theadRow.appendChild(th);
+        }
+        thead.appendChild(theadRow);
+        tbl.appendChild(thead);
+
+        let tbody = document.createElement('tbody');
+        tbl.appendChild(tbody);
+
+        calendar.appendChild(tbl);
+
+        showCalendar(currentMonth, currentYear);
+
+        function showCalendar(month, year) {
+            let firstDay = (new Date(year, month, 1)).getDay();
+            firstDay = (firstDay + 6) % 7; // Перенос начала недели на понедельник
+
+            tbody.innerHTML = "";
+
+            monthYearText.innerHTML = months[month] + " " + year;
+
+            let date = 1;
+
+            for (let i = 0; i < 6; i++) {
+                let row = document.createElement('tr');
+
+                for (let j = 0; j < 7; j++) {
+                    if (i === 0 && j < firstDay) {
+                        let cell = document.createElement('td');
+                        cell.innerHTML = "";
+                        row.appendChild(cell);
+                    } else if (date > daysInMonth(month, year)) {
+                        let cell = document.createElement('td');
+                        cell.innerHTML = "";
+                        row.appendChild(cell);
+                    } else {
+                        let cell = document.createElement('td');
+                        let cellContent = document.createElement('div');
+                        cellContent.classList.add('cell-content');
+                        cellContent.innerHTML = date;
+
+                        if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+                            cell.classList.add("today");
+                        }
+
+                        if (paymentDates.includes(date)) {
+                            cell.classList.add("payment-day");
+                            let paymentLabel = document.createElement('div');
+                            paymentLabel.classList.add('payment-label');
+                            paymentLabel.innerHTML = "Платеж";
+                            cellContent.appendChild(paymentLabel);
+                        }
+
+                        cell.appendChild(cellContent);
+                        row.appendChild(cell);
+                        date++;
+                    }
+                }
+
+                tbody.appendChild(row);
+            }
+        }
+
+        function previous() {
+            currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
+            currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
+            showCalendar(currentMonth, currentYear);
+        }
+
+        function next() {
+            currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
+            currentMonth = (currentMonth + 1) % 12;
+            showCalendar(currentMonth, currentYear);
+        }
+
+        function daysInMonth(month, year) {
+            return 32 - new Date(year, month, 32).getDate();
+        }
+
+        // Скрипт для переключения плательщиков
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.payer-button');
+            const details = document.querySelectorAll('.payer-detail');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Удаляем активный класс у всех кнопок и добавляем его текущей
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Скрываем все детали и показываем выбранную
+                    details.forEach(detail => detail.classList.remove('active'));
+                    const payerId = button.getAttribute('data-payer');
+                    document.getElementById(payerId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

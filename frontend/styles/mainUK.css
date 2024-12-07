@@ -1,0 +1,53 @@
+.search {
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+.payment-calendar {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin: 20px 0;
+}
+
+#calendar div {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.payment-day {
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+ 
