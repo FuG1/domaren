@@ -17,6 +17,7 @@ public class UserController : ControllerBase
     }
     
     [HttpGet]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public User GetUser(int id)
     {
         return _userService.GetUser(id);
