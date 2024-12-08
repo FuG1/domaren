@@ -1,5 +1,6 @@
 ﻿using domaren.realstate.Domain.Contracts;
 using domaren.realstate.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace domaren.realestate.API.Controllers;
@@ -16,6 +17,7 @@ public class UserController : ControllerBase
     }
     
     [HttpGet]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public User GetUser(int id)
     {
         return _userService.GetUser(id);

@@ -17,20 +17,12 @@ namespace domaren.realestate.API.Controllers;
     }
 
     [HttpPost("auth")]
-    public IActionResult AuthUser([FromBody]AuthRequest request)
+    public ActionResult<string> AuthUser([FromBody]AuthRequest request)
     {
         var claims = _authService.AuthUser(request.login, request.password);
         if (claims != null) 
         {
-            var token = JwtTokenProvider.GetToken(claims);
-
-            var response = new
-            {
-                access_token = token,
-                username = claims.Name
-            };
-
-            return new JsonResult(response);
+            return JwtTokenProvider.GetToken(claims);
         }
 
         return Unauthorized();
